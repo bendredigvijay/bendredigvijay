@@ -1,0 +1,146 @@
+<svg width="900" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&amp;display=swap');
+
+      .bg { fill: #0d1117; }
+
+      /* Glitch layers */
+      .name-main { 
+        font-family: 'JetBrains Mono', 'Courier New', monospace; 
+        font-size: 72px; font-weight: 700; fill: #58a6ff; 
+        letter-spacing: -2px;
+      }
+      .name-r { 
+        font-family: 'JetBrains Mono', 'Courier New', monospace; 
+        font-size: 72px; font-weight: 700; fill: #ff4757;
+        letter-spacing: -2px; opacity: 0;
+      }
+      .name-g { 
+        font-family: 'JetBrains Mono', 'Courier New', monospace; 
+        font-size: 72px; font-weight: 700; fill: #7ee787;
+        letter-spacing: -2px; opacity: 0;
+      }
+      .sub { 
+        font-family: 'JetBrains Mono', 'Courier New', monospace; 
+        font-size: 18px; fill: #7ee787; letter-spacing: 6px;
+      }
+      .sub2 { 
+        font-family: 'JetBrains Mono', 'Courier New', monospace; 
+        font-size: 13px; fill: #484f58; letter-spacing: 3px;
+      }
+      .cursor { fill: #58a6ff; }
+      .scanline { fill: none; stroke: #58a6ff; stroke-width: 0.5; opacity: 0.05; }
+      .glow { fill: #58a6ff; opacity: 0.06; filter: url(#glow); }
+      .bracket { fill: #ffa657; font-family: 'JetBrains Mono', monospace; font-size: 72px; font-weight: 700; }
+
+      /* Glitch animation */
+      .name-r {
+        animation: glitch-r 4s infinite;
+      }
+      .name-g {
+        animation: glitch-g 4s infinite;
+      }
+      .cursor-blink {
+        animation: blink 1s step-end infinite;
+      }
+      .sub-fade {
+        animation: fadeup 1.2s ease forwards;
+        opacity: 0;
+      }
+      .sub2-fade {
+        animation: fadeup 1.6s ease forwards;
+        opacity: 0;
+      }
+      .scan {
+        animation: scanmove 3s linear infinite;
+      }
+
+      @keyframes glitch-r {
+        0%,89%,100% { opacity: 0; transform: translate(0,0); }
+        90% { opacity: 0.7; transform: translate(-4px, 2px); clip-path: polygon(0 20%, 100% 20%, 100% 40%, 0 40%); }
+        92% { opacity: 0; }
+        94% { opacity: 0.5; transform: translate(4px, -2px); clip-path: polygon(0 60%, 100% 60%, 100% 80%, 0 80%); }
+        96% { opacity: 0; }
+      }
+      @keyframes glitch-g {
+        0%,91%,100% { opacity: 0; transform: translate(0,0); }
+        92% { opacity: 0.6; transform: translate(5px, 1px); clip-path: polygon(0 30%, 100% 30%, 100% 55%, 0 55%); }
+        94% { opacity: 0; }
+        96% { opacity: 0.4; transform: translate(-3px, 3px); clip-path: polygon(0 70%, 100% 70%, 100% 90%, 0 90%); }
+        98% { opacity: 0; }
+      }
+      @keyframes blink {
+        0%,100% { opacity: 1; } 50% { opacity: 0; }
+      }
+      @keyframes fadeup {
+        0% { opacity: 0; transform: translateY(10px); }
+        100% { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes scanmove {
+        0% { transform: translateY(-200px); }
+        100% { transform: translateY(200px); }
+      }
+    </style>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="200" class="bg" rx="12"/>
+
+  <!-- Top border gradient line -->
+  <defs>
+    <linearGradient id="topline" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="30%" stop-color="#58a6ff"/>
+      <stop offset="70%" stop-color="#7ee787"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="900" height="3" fill="url(#topline)" rx="2"/>
+
+  <!-- Scanline effect -->
+  <rect x="0" y="0" width="900" height="40" fill="none" stroke="#58a6ff" stroke-width="0.4" opacity="0.04" class="scan"/>
+
+  <!-- Grid lines subtle -->
+  <line x1="0" y1="50" x2="900" y2="50" class="scanline"/>
+  <line x1="0" y1="100" x2="900" y2="100" class="scanline"/>
+  <line x1="0" y1="150" x2="900" y2="150" class="scanline"/>
+  <line x1="200" y1="0" x2="200" y2="200" class="scanline"/>
+  <line x1="700" y1="0" x2="700" y2="200" class="scanline"/>
+
+  <!-- Glow blob behind name -->
+  <ellipse cx="450" cy="95" rx="280" ry="60" class="glow"/>
+
+  <!-- Brackets -->
+  <text x="38" y="125" class="bracket" opacity="0.4">{</text>
+  <text x="840" y="125" class="bracket" opacity="0.4">}</text>
+
+  <!-- Glitch layers (behind) -->
+  <text x="450" y="125" text-anchor="middle" class="name-r">DIGVIJAY BENDRE</text>
+  <text x="450" y="125" text-anchor="middle" class="name-g">DIGVIJAY BENDRE</text>
+
+  <!-- Main name -->
+  <text x="450" y="125" text-anchor="middle" class="name-main">DIGVIJAY BENDRE</text>
+
+  <!-- Cursor after name -->
+  <rect x="774" y="86" width="4" height="46" class="cursor cursor-blink"/>
+
+  <!-- Subtitle -->
+  <text x="450" y="158" text-anchor="middle" class="sub sub-fade">FULL STACK ENGINEER</text>
+
+  <!-- Bottom line -->
+  <text x="450" y="182" text-anchor="middle" class="sub2 sub2-fade">REACT · NODE.JS · MICROSERVICES · DOCKER</text>
+
+  <!-- Bottom border -->
+  <rect x="0" y="197" width="900" height="3" fill="url(#topline)" rx="2"/>
+
+  <!-- Corner accents -->
+  <polyline points="10,25 10,10 25,10" fill="none" stroke="#58a6ff" stroke-width="1.5" opacity="0.6"/>
+  <polyline points="875,10 890,10 890,25" fill="none" stroke="#58a6ff" stroke-width="1.5" opacity="0.6"/>
+  <polyline points="10,175 10,190 25,190" fill="none" stroke="#7ee787" stroke-width="1.5" opacity="0.6"/>
+  <polyline points="875,190 890,190 890,175" fill="none" stroke="#7ee787" stroke-width="1.5" opacity="0.6"/>
+</svg>
