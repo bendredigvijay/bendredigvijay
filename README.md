@@ -1,23 +1,8 @@
 <!-- Header -->
 <div align="center">
-
-```
-██████╗   ██╗   ██████╗   ██╗   ██╗  ██╗       ██╗   █████╗   ██╗   ██╗
-██╔══██╗  ██║  ██╔════╝   ██║   ██║  ██║       ██║  ██╔══██╗  ╚██╗ ██╔╝
-██║  ██║  ██║  ██║  ███╗  ██║   ██║  ██║       ██║  ███████║   ╚████╔╝ 
-██║  ██║  ██║  ██║   ██║  ╚██╗ ██╔╝  ██║  ██   ██║  ██╔══██║    ╚██╔╝  
-██████╔╝  ██║  ╚██████╔╝   ╚████╔╝   ██║  ╚█████╔╝  ██║  ██║     ██║   
-╚═════╝   ╚═╝   ╚═════╝     ╚═══╝    ╚═╝   ╚════╝   ╚═╝  ╚═╝     ╚═╝   
-
-██████╗   ███████╗  ███╗   ██╗  ██████╗   ██████╗   ███████╗
-██╔══██╗  ██╔════╝  ████╗  ██║  ██╔══██╗  ██╔══██╗  ██╔════╝
-██████╔╝  █████╗    ██╔██╗ ██║  ██║  ██║  ██████╔╝  █████╗  
-██╔══██╗  ██╔══╝    ██║╚██╗██║  ██║  ██║  ██╔══██╗  ██╔══╝  
-██████╔╝  ███████╗  ██║ ╚████║  ██████╔╝  ██║  ██║  ███████╗
-╚═════╝   ╚══════╝  ╚═╝  ╚═══╝  ╚═════╝   ╚═╝  ╚═╝  ╚══════╝
-```
-
+  <img src="banner.svg" alt="Digvijay Bendre" width="100%"/>
 </div>
+
 
 <div align="center">
 
@@ -160,36 +145,6 @@ Jan 2023 – Nov 2023  |  Associate Software Engineer Intern  |  Sumago Infotech
 ```
 > - ☕ Java enterprise apps with **Spring Boot** REST APIs and microservices
 > - 🗄️ Oracle & MySQL schema optimization — complex queries and stored procedures
-
----
-
-## `$ ls ./projects/ -la`
-
-### 📁 [Automated Swipe Tracker](https://github.com/digvijaybendre) `2025`
-```
-Stack: Node.js · Selenium · SQLite · Express API
-OS:    Ubuntu (Linux-based)
-```
-> Linux automation tool monitoring real-time GreytHR attendance data.
-> Reduced manual effort by **90%** · Exposed via lightweight Express API for desktop widget integration.
-
----
-
-### 📁 [HealthyMe – E-Commerce Marketplace](https://github.com/digvijaybendre) `2024`
-```
-Stack: React · Node.js · PostgreSQL
-```
-> Full-stack marketplace with real-time inventory tracking and secure payment gateway.
-> **40% increase** in customer engagement via optimized UX and recommendation engine.
-
----
-
-### 📁 [Hobby Lobby – Real-Time Chat App](https://github.com/digvijaybendre) `2023`
-```
-Stack: Java · Spring Boot · GCP Datastore
-```
-> Real-time chat platform with Spring Security RBAC and NoSQL storage.
-> Interest-based matching algorithm to increase user retention.
 
 ---
 
